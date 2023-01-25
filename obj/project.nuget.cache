@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "6bTmePpxSk4xO2hTd8UcotgstZyhkU5yRugLGwTFcOSj6IJZi9BY3Whzz6k2aWXtummLULc85kZyZei1L6vMVQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ryan2\\source\\repos\\WinFormsApp1\\WinFormsApp1\\NASA_app.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ryan2\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}
