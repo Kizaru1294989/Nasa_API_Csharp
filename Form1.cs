@@ -14,7 +14,7 @@ namespace WinFormsApp1
     public partial class Form1 : Form
     {
 
-        private static GetAPI data = new GetAPI(); // on instancie toutes les donnée récoltées dans le Getapi.cs
+        private static GetAPI data = new GetAPI(); // on instancie toutes les donnÃ©e rÃ©coltÃ©es dans le Getapi.cs
         private List<string> name = data.getter_name;
         private List<string> km_diameter_min = data.getter_km_diameter_min;
         private List<string> km_diameter_max = data.getter_km_diameter_max;
@@ -30,7 +30,7 @@ namespace WinFormsApp1
         private List<string> orbital_class_range = data.getter_orbital_class_range;
         private Dictionary<string, List<string>> closeApproachDates = data.getter_closeApproachDates;
 
-        private  Form1()
+        public Form1()
         {
             InitializeComponent(); // on initlialize les composants de notre form (label,button,etc...)
          
@@ -42,7 +42,7 @@ namespace WinFormsApp1
         private void Control()
         {
 
-            Pages(); // on crée les pages
+            Pages(); // on crÃ©e les pages
 
         }
 
@@ -128,7 +128,7 @@ namespace WinFormsApp1
                         Image resized_apod = Image.FromStream(mem).GetThumbnailImage(493, 391, null, IntPtr.Zero);// et pour la page APOD
                         // on change les images
                         pictureBox43.Image = resized_apod; // apod
-                        this.BackgroundImage = resized; // fond d'écran
+                        this.BackgroundImage = resized; // fond d'Ã©cran
                     }
                 }
 
@@ -143,7 +143,7 @@ namespace WinFormsApp1
 
         private Form CreateForm (int wich)
         {
-            int orbite = wich- 1; // pour se situer et savoir quelle int choisir dans les liste de donnée pour avoir les bonne donnée \ ex : wich = 1 (le label numéro 1) donc on prend la premiere valeur des liste sois name[0] (wich -1))
+            int orbite = wich- 1; // pour se situer et savoir quelle int choisir dans les liste de donnÃ©e pour avoir les bonne donnÃ©e \ ex : wich = 1 (le label numÃ©ro 1) donc on prend la premiere valeur des liste sois name[0] (wich -1))
             Form newForm = new Form();
             newForm.Size = new Size(750, 350);
             newForm.BackColor = Color.DarkGray;
@@ -156,7 +156,7 @@ namespace WinFormsApp1
             List<string> dates = closeApproachDates[name[orbite]];
             foreach (string date in dates)
             {
-                label2.Items.Add(date); // on ajoute dans une liste box les approches passée et future avec leur vélocité et leur distance
+                label2.Items.Add(date); // on ajoute dans une liste box les approches passÃ©e et future avec leur vÃ©locitÃ© et leur distance
             }
             
             label2.Location = new System.Drawing.Point(400, 50);
@@ -169,7 +169,7 @@ namespace WinFormsApp1
             label3.Size = new Size(900, 200);
             label3.Location = new System.Drawing.Point(450,20);
 
-            label1.Text = // on affiche nos données sur l'astéroide
+            label1.Text = // on affiche nos donnÃ©es sur l'astÃ©roide
                 "Firstdate : " + firstdate[orbite] + "\n" 
                 + "Lastdate : " + lastdate[orbite] + "\n" 
                 + "Min Km diameter : " + km_diameter_min[orbite] + "\n"
@@ -203,7 +203,7 @@ namespace WinFormsApp1
 
         }
 
-        private int GetNumber(object sender) //On prend l 'int contenu dans les charactères d'un object (un click event d'un label dans ce cas )
+        private int GetNumber(object sender) //On prend l 'int contenu dans les charactÃ¨res d'un object (un click event d'un label dans ce cas )
         { 
             string labelName = ((Label)sender).Name;
             Match match = Regex.Match(labelName, @"\d+");
